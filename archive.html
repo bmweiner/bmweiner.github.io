@@ -1,0 +1,39 @@
+---
+layout: page
+title: Archive
+permalink: /archive/
+---
+<div class="feed center">
+  <a href="/feed.xml">
+    <i class="fa fa-rss"></i> Atom
+  </a>
+</div>
+<div class="post-bar"></div>
+<div class="categories">
+  {% for category in site.categories %}
+    <h3 class="category"><a href="#{{ category[0] }}">{{ category[0] }}</a></h3>
+  {% endfor %}
+</div>
+<div class="post-bar"></div>
+<div class="archive-posts">
+  {% for category in site.categories %}
+    <h3>
+      <a class="post-category" name="{{ category[0] }}">
+        {{ category[0] }}
+      </a>
+    </h3>
+    <ul>
+      {% for post in category[1] %}
+        <li>
+          <article class="archive-post">
+            <time class="post-time">{{ post.date | date: "%b %-d, %Y" }}</time>
+            <span>-</span>
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>

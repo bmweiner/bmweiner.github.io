@@ -1,0 +1,23 @@
+---
+layout: page
+title: Media
+permalink: /media/
+---
+<div class="media-posts">
+  {% for post in site.posts limit:5 %}
+    <a href="{{ post.url }}">
+      <article class="media-post{% if post.image %} media-post-alt{% endif %}">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <time class="post-time">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <p class="post-summary">{{ post.summary }}</p>
+        <div class="crop">
+          <img class="post-image" src={{ post.image }}></img>
+        </div>
+      </article>
+    </a>
+    <div class="post-bar"></div>
+  {% endfor %}
+</div>
+<div class="center">
+  <a href="{{ site.baseurl }}/archive"><p>More...</p></a>
+</div>

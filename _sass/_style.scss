@@ -1,0 +1,220 @@
+// default elements
+body {
+  font: 100% $font-stack;
+  color: $font-color;
+}
+a {
+   color: $link-color;
+   text-decoration: none;
+   &:hover {
+      text-decoration: underline;
+   }
+}
+blockquote {
+  padding: 5px;
+  background-color: $blockquote-background-color;
+  p {
+    margin: 0;
+  }
+}
+
+//generic
+.center {
+  text-align: center;
+}
+
+// components
+.logo {
+  margin: 0;
+  font-size: 1.50em;
+  font-weight: bold;
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+}
+.nav {
+  display: flex;
+  .nav-item {
+    padding: .25em .75em;
+  }
+  .active {
+    @include border-radius(10px);
+    background-color: $nav-active-background-color;
+  }
+  a {
+    color: $font-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: $font-hover-color;
+    }
+  }
+}
+.badges {
+  display: flex;
+  font-size: 28px;
+  .badge {
+    padding: 0 0.1em;
+  }
+  a {
+    color: $font-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: $font-hover-color;
+    }
+  }
+}
+.post {
+  .post-time {
+    color: $font-color-alt;
+  }
+}
+.media-posts {
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+  .post-title {
+    margin: 0;
+  }
+  .post-time {
+    display:block;
+    margin: 5px 0;
+    color: $font-color-alt;
+  }
+  .post-summary {
+    margin: 0;
+  }
+  .media-post {
+    &:hover {
+      background-color: $post-hover-background-color;
+      .post-image {
+        opacity: 0.5;
+      }
+    }
+  }
+  .media-post-alt {
+    position: relative;
+    .post-title, .post-time {
+      position: absolute;
+      padding: 1px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .post-title {
+      top: 10px;
+      color: white;
+    }
+    .post-time {
+      top: 40px;
+    }
+    .post-summary { display: none; }
+    .crop {
+      display: flex;
+      align-items: center;
+      height: 15rem;
+      overflow: hidden;
+      background-color: $background-color;
+    }
+    .post-image {
+      width: 100%;
+    }
+  }
+}
+.archive-posts {
+  .post-category {
+    text-decoration: none;
+    color: $font-color;
+  }
+}
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.headshot {
+  img {
+    float: right;
+    width: 200px;
+    border: 5px solid black;
+    margin: 20px 0px 5px 5px;
+    }
+    text-align: center;
+    @media screen and (max-width: $small-screen) {
+      img {
+        float: none;
+        clear: both;
+      }
+  }
+}
+// sections
+.cover {
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  margin:auto;
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.25em;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media screen and (max-width: $small-screen) {
+    flex-direction: column;
+    .logo {
+      text-align: center;
+      margin-bottom: 0.25em;
+    }
+  }
+}
+.content {
+  flex: 1;  // sticky footer
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 0.25em;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media screen and (max-width: $small-screen) {
+    flex-direction: column;
+  }
+}
+.footer-item {
+  width: 128px;
+}
+.footer-copyright{
+  text-align: center;
+  font-size: 0.75rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  a, p {
+    margin-bottom: 2px;
+  }
+}
+.section-bar {
+  border-bottom: 5px solid $bar-color;
+}
+.post-bar {
+  border-bottom: 1px solid $bar-color;
+  margin: 10px 5px;
+}

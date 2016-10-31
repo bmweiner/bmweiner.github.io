@@ -1,0 +1,31 @@
+---
+---
+$small-screen: 468px;
+
+$font-stack: Montserrat, Geneva, Tahoma, Verdana, sans-serif;
+$font-color: #333;
+$font-color-alt: #999;
+$font-hover-color: #5F5E5D;
+$link-color: #4078c0;
+
+$bar-color: #929487;
+
+$background-color: #efefef;
+$nav-active-background-color: #e6f277;
+$code-background-color: $background-color;
+$blockquote-background-color: #eef;
+
+$post-hover-background-color: rgba(230, 242, 119, 0.56);
+
+$flag-icon-css-path: "images/flags" !default;
+$flag-icon-rect-path: "/4x3" !default;
+$flag-icon-square-path: "/1x1" !default;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import "mixins";
+@import "normalize";
+@import "font-awesome";
+@import "flag-icon";
+@import "syntax";
+@import "style";

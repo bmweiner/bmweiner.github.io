@@ -1,0 +1,22 @@
+<footer>
+  <div class="footer">
+    <div class="footer-item">
+      {% include badges.html %}
+    </div>
+    <div class="footer-item">
+      <p>Made in <span class="flag-icon flag-icon-us" title="USA"></span></p>
+    </div>
+    <div class="footer-item">
+      <nav>
+        <a href="{{ site.baseurl }}/analytics">Analytics</a>
+        <a href="/feed.xml">
+          <i class="fa fa-rss"></i>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <p>© 2015-{{ 'now' | date: "%Y" }} Benjamin Weiner. All Rights Reserved.</p>
+    <a href="{{ site.baseurl }}/conditions">Terms Privacy</a>
+  </div>
+</footer>

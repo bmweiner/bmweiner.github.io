@@ -1,0 +1,26 @@
+---
+layout: page
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+  <time class="post-time"
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished">
+    {{ page.date | date: "%b %-d, %Y" }}
+  </time>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  {% if page.modified %}
+  <br>
+  <time class="post-time"
+        datetime="{{ page.modified | date_to_xmlschema }}"
+        itemprop="dateModified">
+    modified: {{ page.modified | date: "%b %-d, %Y %r" }}
+  </time>
+  {% endif %}
+  <div class="post-bar"></div>
+  <strong>category:</strong> {{ page.category }}
+  <br>
+  <strong>tags:</strong> {{ page.tags | join: ', '}}
+</article>

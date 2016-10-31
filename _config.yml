@@ -1,0 +1,25 @@
+title: Benjamin Weiner
+description: Management Consulting, Analytics, Machine Learning
+
+linkedin_username: bmweiner
+github_username:  bmweiner
+twitter_username: bmweiner
+
+email: ben@bmweiner.com
+
+timezone: America/New_York
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: post
+      author: Ben
+
+jekyll-mentions: https://github.com
