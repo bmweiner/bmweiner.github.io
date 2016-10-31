@@ -22,4 +22,9 @@ defaults:
       layout: post
       author: Ben
 
+gems:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-mentions
+      
 jekyll-mentions: https://github.com
