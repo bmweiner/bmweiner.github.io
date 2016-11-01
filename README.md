@@ -1,1 +1,1 @@
-Source for [bmweiner.com](bmweiner.com).
+Source for [bmweiner.com](http://bmweiner.com).
