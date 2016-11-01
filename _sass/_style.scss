@@ -208,7 +208,8 @@ blockquote {
   }
 }
 .content {
-  flex: 1;  // sticky footer
+  flex: 1;
+  flex-basis: auto;  //IE 11 fix
   margin-left: 12%;
   margin-right: 12%;
   margin-top: 10px;
