@@ -37,17 +37,26 @@ blockquote {
   display: flex;
   .nav-item {
     padding: .25em .75em;
-  }
-  .active {
-    @include border-radius(10px);
-    background-color: $nav-active-background-color;
+    &:hover {
+      border-bottom: 1px solid $bar-color;
+      a {
+        color: $font-hover-color;
+      }
+    }
   }
   a {
     color: $font-color;
     text-decoration: none;
     text-transform: uppercase;
+  }
+  .active {
+    @include border-radius(10px);
+    background-color: $nav-active-background-color;
     &:hover {
-      color: $font-hover-color;
+      border: none;
+      a {
+        color: $font-color;
+      }
     }
   }
 }
@@ -114,15 +123,22 @@ blockquote {
     .crop {
       display: flex;
       align-items: center;
-      height: 15rem;
+      height: 13rem;
       overflow: hidden;
       background-color: $background-color;
+      @media screen and (max-width: $medium-screen) {
+        height: 11rem;
+      }
+      @media screen and (max-width: $small-screen) {
+        height: 9rem;
+      }
     }
     .post-image {
       width: 100%;
     }
   }
 }
+
 .archive-posts {
   .post-category {
     text-decoration: none;
@@ -150,6 +166,14 @@ blockquote {
       }
   }
 }
+.section-bar {
+  border-bottom: 5px solid $bar-color;
+}
+.post-bar {
+  border-bottom: 1px solid $bar-color;
+  margin: 10px 5px;
+}
+
 // sections
 .cover {
 	height: 80vh;
@@ -157,13 +181,16 @@ blockquote {
 	align-items: center;
 	justify-content: center;
   flex-direction: column;
+  .nav {
+    margin: 5px 0px;
+  }
 }
 .page {
   display: flex;
   flex-direction: column;
   max-width: 1024px;
-  margin:auto;
   min-height: 100vh;
+  margin:auto;
 }
 .header {
   display: flex;
@@ -204,17 +231,10 @@ blockquote {
 }
 .footer-copyright{
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   margin-left: 10%;
   margin-right: 10%;
   a, p {
     margin-bottom: 2px;
   }
-}
-.section-bar {
-  border-bottom: 5px solid $bar-color;
-}
-.post-bar {
-  border-bottom: 1px solid $bar-color;
-  margin: 10px 5px;
 }
