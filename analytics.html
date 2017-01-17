@@ -3,4 +3,59 @@ layout: page
 title: Analytics
 permalink: /analytics/
 ---
-I have not implemented this yet :-)
+<div class=graph-settings>
+  <select id=select-time-range>
+    <option value="30">Past 30 days</option>
+    <option value="90">Past 90 days</option>
+    <option value="120">Past 6 months</option>
+    <option value="365">Past 12 months</option>
+  </select>
+</div>
+<div class="graphs">
+  <div id="visits" class="graph">
+    <h3 class="graph-title">
+      <i class="fa fa-users"></i> User Volume
+    </h3>
+    <div class="graph-content"></div>
+    <div class="graph-metrics">
+      <div class="metric views-metric">
+        <p class="metric-val">-</p><p class="metric-name">Views</p>
+      </div>
+      <div class="metric users-metric">
+        <p class="metric-val">-</p><p class="metric-name">Users</p>
+      </div>
+    </div>
+  </div>
+  <div id="locations" class="graph">
+    <h3 class="graph-title">
+      <i class="fa fa-map-marker"></i> Users by Location
+    </h3>
+    <div class="graph-content"></div>
+    <div class="graph-tbl">
+      <h4 class="graph-tbl-title">
+        <i class="fa fa-globe"></i> Top Countries
+      </h4>
+    </div>
+  </div>
+  <div id="platforms" class="graph">
+    <h3 class="graph-title">
+      <i class="fa fa-desktop"></i> Users by Device
+    </h3>
+    <div class="graph-content"></div>
+    <div class="graph-metrics"></div>
+  </div>
+  <div id="documents" class="graph">
+    <h3 class="graph-title">
+      <i class="fa fa-newspaper-o"></i> Popular Content
+    </h3>
+    <div class="graph-tbl">
+      <h4 class="graph-tbl-title">
+        <i class="fa fa-trophy"></i> Top 10 Pages
+      </h4>
+    </div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src ="/scripts/app/analytics.js"></script>
