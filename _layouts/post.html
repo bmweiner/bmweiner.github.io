@@ -8,7 +8,7 @@ layout: page
           datetime="{{ page.date | date_to_xmlschema }}"
           itemprop="datePublished">
       {{ page.date | date: "%b %-d, %Y" }}
-    </time> | <a href="/archive/# {{ page.category }}">{{ page.category }}</a>
+    </time> | <a href="/archive/#{{ page.category }}">{{ page.category }}</a>
   </p>
   <div class="post-content" itemprop="articleBody">
     {{ content }}
