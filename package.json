@@ -1,0 +1,26 @@
+{
+  "name": "bmweiner.github.io",
+  "version": "1.0.0",
+  "description": "Source for [bmweiner.com](http://bmweiner.com).",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-google": "^0.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-google": "^0.7.1"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmweiner/bmweiner.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmweiner/bmweiner.github.io/issues"
+  },
+  "homepage": "https://github.com/bmweiner/bmweiner.github.io#readme"
+}

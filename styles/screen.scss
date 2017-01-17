@@ -23,6 +23,10 @@ $flag-icon-css-path: "images/flags" !default;
 $flag-icon-rect-path: "/4x3" !default;
 $flag-icon-square-path: "/1x1" !default;
 
+// graphs
+$views-color: rgba(15, 123, 20, 0.85);
+$users-color: rgba(44, 116, 177, 0.85);
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 @import "mixins";
