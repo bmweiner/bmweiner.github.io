@@ -3,8 +3,8 @@ layout: post
 title:  "Sonos Airplay"
 date:   2016-10-31 00:39:00 -0400
 summary: "Stream audio to any Sonos component via AirPlay using a
-Raspberry Pi, Shairport Sync, DarkIce, and Icecast2."
-category: dev
+          Raspberry Pi, Shairport Sync, DarkIce, and Icecast2."
+category: development
 tags: [raspberry pi, sonos, hack]
 ---
 Stream audio to any Sonos component via AirPlay using a
