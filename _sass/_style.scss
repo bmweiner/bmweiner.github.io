@@ -17,6 +17,20 @@ blockquote {
     margin: 0;
   }
 }
+table, th, td {
+  border: 1px solid $bar-color;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  margin: 5px;
+}
+thead {
+  // background-color: $background-color;
+}
 
 //generic
 .center {
