@@ -57,10 +57,16 @@ function devicesGraph() {
       }
 
       let data = obj.data;
-      addFactors(obj.data, 'platform', systemFactors, 'system');
-      addFactors(obj.data, 'platform', deviceFactors, 'device');
-      let systems = nestRollup(data, 'system', 'users').entries();
-      let devices = nestRollup(data, 'device', 'users').entries();
+      let cols = obj.columns;
+      let iplatform = cols.indexOf('platform');
+      let iusers = cols.indexOf('users');
+      let isystem = cols.length;
+      let idevice = cols.length + 1;
+
+      addFactors(obj.data, iplatform, systemFactors, isystem);
+      addFactors(obj.data, iplatform, deviceFactors, idevice);
+      let systems = nestRollup(data, isystem, iusers).entries();
+      let devices = nestRollup(data, idevice, iusers).entries();
 
       systems.sort(d3.descending);
 

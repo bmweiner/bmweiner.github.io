@@ -44,22 +44,27 @@ function visitsGraph() {
       }
 
       let data = obj.data;
+      let cols = obj.columns;
+      let idate = cols.indexOf('date');
+      let iusers = cols.indexOf('users');
+      let iviews = cols.indexOf('views');
+
       let parseTime = d3.timeParse('%Y-%m-%d');
       for(i=0; i<data.length; i++) {
         let d = data[i];
-        d.date = parseTime(d.date);
-        d.users = +d.users;
-        d.views = +d.views;
+        d[idate] = parseTime(d[idate]);
+        d[iusers] = +d[iusers];
+        d[iviews] = +d[iviews];
       }
 
       let dateFn = function(d) {
-        return d.date;
+        return d[idate];
       };
       let usersFn = function(d) {
-        return d.users;
+        return d[iusers];
       };
       let viewsFn = function(d) {
-        return d.views;
+        return d[iviews];
       };
 
       x.domain(d3.extent(data, dateFn))
@@ -80,27 +85,27 @@ function visitsGraph() {
 
       bars.transition()
           .attr('x', function(d) {
-            return x(d.date) - width/data.length/2;
+            return x(d[idate]) - width/data.length/2;
           })
           .attr('y', function(d) {
-            return yUsers(d.users);
+            return yUsers(d[iusers]);
           })
           .attr('width', width/data.length - 1)
           .attr('height', function(d) {
-            return height - yUsers(d.users);
+            return height - yUsers(d[iusers]);
           });
 
       bars.enter().append('rect')
           .attr('class', 'users-bar')
           .attr('x', function(d) {
-            return x(d.date) - width/data.length/2;
+            return x(d[idate]) - width/data.length/2;
           })
           .attr('width', width/data.length - 1)
           .attr('y', function(d) {
-            return yUsers(d.users);
+            return yUsers(d[iusers]);
           })
           .attr('height', function(d) {
-            return height - yUsers(d.users);
+            return height - yUsers(d[iusers]);
           });
 
       bars.exit()
@@ -108,10 +113,10 @@ function visitsGraph() {
 
       let line = d3.line()
         .x(function(d) {
-          return x(d.date);
+          return x(d[idate]);
         })
         .y(function(d) {
-          return yViews(d.views);
+          return yViews(d[iviews]);
         });
 
       path.datum(data)
@@ -122,10 +127,10 @@ function visitsGraph() {
 
       points.transition()
         .attr('cx', function(d) {
-          return x(d.date);
+          return x(d[idate]);
         })
         .attr('cy', function(d) {
-          return yViews(d.views);
+          return yViews(d[iviews]);
         });
 
       points.enter()
@@ -133,10 +138,10 @@ function visitsGraph() {
           .attr('class', 'views-point')
           .attr('r', 2)
           .attr('cx', function(d) {
-            return x(d.date);
+            return x(d[idate]);
           })
           .attr('cy', function(d) {
-            return yViews(d.views);
+            return yViews(d[iviews]);
           });
 
       points.exit()
@@ -145,11 +150,11 @@ function visitsGraph() {
       // add metrics
       d3.select('#visits').select('.views-metric').select('.metric-val')
           .text(d3.sum(data, function(d) {
-            return d.views;
+            return d[iviews];
           }));
       d3.select('#visits').select('.users-metric').select('.metric-val')
           .text(d3.sum(data, function(d) {
-            return d.users;
+            return d[iusers];
           }));
     });
   };

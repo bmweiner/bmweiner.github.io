@@ -18,7 +18,11 @@ function documentsGraph() {
       }
 
       let data = obj.data;
-      let pages = nestRollup(data, 'uri', 'views').entries();
+      let cols = obj.columns;
+      let iuri = cols.indexOf('uri');
+      let iviews = cols.indexOf('views');
+
+      let pages = nestRollup(data, iuri, iviews).entries();
 
       pages = pages.filter(function(e) {
         return e.key.startsWith(domain);

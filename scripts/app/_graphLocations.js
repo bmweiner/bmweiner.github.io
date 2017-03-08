@@ -100,8 +100,13 @@ function locationsGraph() {
           }
 
           let data = obj.data;
-          let states = nestRollup(data, 'state', 'users');
-          let countries = nestRollup(data, 'country', 'users');
+          let cols = obj.columns;
+          let istate = cols.indexOf('state');
+          let icountry = cols.indexOf('country');
+          let iusers = cols.indexOf('users');
+
+          let states = nestRollup(data, istate, iusers);
+          let countries = nestRollup(data, icountry, iusers);
 
           let trimMax = trimmedMax(states.values());
           let realMax = d3.max(states.values());
