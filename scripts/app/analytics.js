@@ -13,7 +13,7 @@ const domain = 'bmweiner.com';
 {% if jekyll.environment == "development" %}
   const urlBase = 'http://localhost:5000/api/public/';
 {% else %}
-  const urlBase = 'https://crumby-crumby.rhcloud.com/api/public/';
+  const urlBase = 'https://crumby.bmweiner.com/api/public/';
 {% endif %}
 
 visitsGraph();
