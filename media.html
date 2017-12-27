@@ -10,9 +10,12 @@ permalink: /media/
         <h2 class="post-title">{{ post.title }}</h2>
         <time class="post-time">{{ post.date | date: "%b %-d, %Y" }}</time>
         <p class="post-summary">{{ post.summary }}</p>
-        <div class="crop">
-          <img class="post-image" src={{ post.image }}></img>
-        </div>
+        {% if post.image %}
+          <div class="crop">
+            <img class="post-image" src={{ post.image }}></img>
+          </div>
+        {% endif %}
+
       </article>
     </a>
     <div class="post-bar"></div>
