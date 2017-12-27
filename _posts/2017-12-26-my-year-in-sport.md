@@ -8,5 +8,5 @@ tags: [kom, ironman]
 My year in sport, courtesy of Strava.
 
 <iframe id="ytplayer" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/watch?v=r5wWY7aLX4c?autoplay=1&origin={{site.url}}"
+  src="https://www.youtube.com/embed/r5wWY7aLX4c?autoplay=1&origin={{site.url}}"
   frameborder="0"></iframe>
