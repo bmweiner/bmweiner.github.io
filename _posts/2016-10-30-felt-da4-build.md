@@ -3,8 +3,8 @@ layout: post
 title:  "Felt DA4 Build"
 date:   2016-09-17 10:00:00 -0400
 image: "/assets/images/felt-da4-build-products.jpg"
-category: triathlon
-tags: [cycling, maintenance]
+category: life
+tags: [triathlon, cycling, maintenance]
 ---
 Felt provides an [Owner's Manual][1] and [Supplemental Manual][2] which covers
 component installation and wiring for the IAx. Rather than repeat that info,

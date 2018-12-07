@@ -4,8 +4,8 @@ title:  "My Year in Sport (2017)"
 date:   2017-12-26 21:30:00 -0400
 modified: 2017-12-30 12:30:00 -0400
 summary: "My Strava data for 2017."
-category: triathlon
-tags: [kom, ironman]
+category: life
+tags: [fitness]
 ---
 My year in sport, courtesy of Strava.
 

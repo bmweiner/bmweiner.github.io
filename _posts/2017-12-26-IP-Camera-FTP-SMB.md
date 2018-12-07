@@ -4,7 +4,7 @@ title:  "Storing IP Camera Recordings with FTP"
 date:   2017-12-26 17:00:00 -0400
 modified: 2017-12-26 17:00:00 -0400
 summary: "Setup FTP and SMB on a raspberry pi to store IP Camera footage."
-category: development
+category: computer science
 tags: [raspberry pi, Amcrest, FTP, SMB]
 ---
 These are my notes for configuring external storage and installing FTP and Samba
