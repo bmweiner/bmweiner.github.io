@@ -187,7 +187,11 @@ thead {
   border-bottom: 1px solid $bar-color;
   margin: 10px 5px;
 }
-
+.post-img{
+  max-width: 100%;
+  display:block;
+  margin: auto;
+}
 .social-buttons{
   padding: 5px;
   display: flex;
