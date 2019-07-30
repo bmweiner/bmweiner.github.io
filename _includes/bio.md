@@ -1,19 +1,18 @@
-Hi! My name is Ben Weiner. I am a data analytics manager in the Washington, D.C.
-area where I provide consulting services to public sector and industry customers.
-My specialty is in designing and delivering data driven products to solve
+Hi! My name is Ben Weiner. I am a data science manager in the Washington, D.C.
+area. My specialty is in designing and delivering data driven products to solve
 complex business problems through requirements design, data gathering,
 analytics, modeling, and visualization. I work with a variety of open source and 
-commercial software to build solutions including Python, R, Java, SAS, and AWS.
+commercial software to build solutions including Python, Spark, R, Java, and AWS.
 
-I am currently working with the Analytics and Cognitive practice at Deloitte 
-Consulting. Some applications of my work include machine learning, data mining, 
-simulation, natural language processing, and association analysis. I previously
-worked for Booz Allen Hamilton and PTC. I have a B.S. in Industrial and Systems 
+In my current role as a product manager at Capital One, I am responsible for
+several Anti-Money Laundering models which risk rate customers and identify
+suspicious transaction activity. Prior to this, I worked on many analytics
+consulting engagements with federal clients in the health care and security areas,
+as a consultant with Deloitte and Booz Allen Hamilton. Some applications of my work
+include risk modeling, machine learning, simulation, natural language processing, 
+and association analysis. I have a B.S. in Industrial and Systems 
 Engineering from Virginia Tech and am pursuing an M.S. in Computer Science from 
 Johns Hopkins University. For more, head over to my [LinkedIn][linkedin].
-
-In my free time I enjoy conquering [physical challenges][strava], developing
-[software][github], and spending time with my better half.
 
 Contact me at <{{ site.email }}>.
 
